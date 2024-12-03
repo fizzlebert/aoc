@@ -18,13 +18,7 @@ answer =
 
 IO.puts(answer)
 
-# O(n^2)
-# iterate over list twice to find count?
-counts =
-  right
-  |> Enum.uniq()
-  |> Enum.map(fn n -> {n, Enum.count(right, &(&1 == n))} end)
-  |> Enum.reduce(%{}, fn {n, count}, acc -> Map.put(acc, n, count) end)
+counts = Enum.frequencies(right)
 
 # O(n)
 answer2 =

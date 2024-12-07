@@ -17,7 +17,6 @@ defmodule Aoc do
 
     if File.exists?(file) do
       File.read!(file)
-      |> process_input()
     else
       session = System.get_env("SESSION") || raise "Environment variable SESSION not set"
 
@@ -30,12 +29,6 @@ defmodule Aoc do
       File.write!(file, resp.body)
 
       resp.body
-      |> process_input()
     end
-  end
-
-  defp process_input(input) do
-    input
-    |> String.split("\n", trim: true)
   end
 end

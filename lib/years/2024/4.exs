@@ -1,4 +1,6 @@
-input = Aoc.input(2024, 4)
+input =
+  Aoc.input(2024, 4)
+  |> String.split("\n", trim: true)
 
 # Regex.scan returns non overlapping but since xmas has no repeating
 # chars no possible overlaps

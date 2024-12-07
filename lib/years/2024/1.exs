@@ -1,4 +1,6 @@
-input = Aoc.input(2024, 1)
+input =
+  Aoc.input(2024, 1)
+  |> String.split("\n", trim: true)
 
 # O(n)
 {left, right} =

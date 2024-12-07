@@ -1,4 +1,6 @@
-input = Aoc.input(2024, 2)
+input =
+  Aoc.input(2024, 2)
+  |> String.split("\n", trim: true)
 
 answer =
   input

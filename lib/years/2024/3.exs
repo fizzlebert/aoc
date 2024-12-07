@@ -1,4 +1,6 @@
-input = Aoc.input(2024, 3)
+input =
+  Aoc.input(2024, 3)
+  |> String.split("\n", trim: true)
 
 parse_mul = fn l ->
   Regex.scan(~r/mul\((?<l>\d+),(?<r>\d+)\)/, l)
